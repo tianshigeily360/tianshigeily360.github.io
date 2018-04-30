@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title><![CDATA[记百度前端 IFE 学院的第一天]]></title>
-    <url>%2F2018%2F04%2F29%2FThe-First%2F</url>
+    <url>%2F2018%2F04%2F29%2F%E7%99%BE%E5%BA%A6%20IFE%201%2F</url>
     <content type="text"><![CDATA[在杠姐这首曲子下写作都变得特别有 feel 这个博客建了也有一段日子了，本意是想给自己一个输出的空间，但拖延症都快使我忘记了它。那么借着在百度前端学院学习的日子，好好记录一下自己吧！ 今天主要是将课程中提供的资料阅读一遍，对基础又加深了一些了解。 不过只花了不到两个小时的时间粗读了一遍，以后还要常翻出来看看。 名词的梳理首先要感谢 @知乎张秋怡 的回答，简直对小白太友好了。 前后端的交互 她对于后端的解释让我耳目一新，之前因为只关注前端，所以对后端只是有一个模糊的认识。 浏览器与服务器之间的请求与交互是比较有趣的，他们之间需要指定一种协议（比如 HTTP/HTTPS）和一种数据封装格式（比如 HTML/XML）才能达成交互，这与我们写的前端代码要定下一定的标准比较相像。不过这些都是冰山一角，在以后的学习过程中会逐渐对这些知识产生更深的理解。 HTML 5之前只学习了 HTML 的基础概念，今天了解到了 HTML5 的一些新特性与新标准。 HTML5 Canvas 这个元素可以在网页进行一些动画制作 HTML5 新语义 对页面的不同部分增加了一些新语义 * &lt;article&gt; * &lt;aside&gt; * &lt;details&gt; * &lt;figcaption&gt; * &lt;figure&gt; * &lt;footer&gt; * &lt;header&gt; * &lt;main&gt; * &lt;mark&gt; * &lt;nav&gt; * &lt;section&gt; * &lt;summary&gt; * &lt;time&gt;]]></content>
       <categories>
         <category>百度前端技术学院</category>
