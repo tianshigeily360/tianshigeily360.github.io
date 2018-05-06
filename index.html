@@ -424,7 +424,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  283 字
+                  1,055 字
                 </span>
               
 
@@ -440,7 +440,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1 分钟
+                  4 分钟
                 </span>
               
             </div>
@@ -462,19 +462,18 @@
 
       
         
-          
-            <div class="aplayer" data-id="445546970" data-server="netease" data-type="song" data-mode="single"></div>
+          <div class="aplayer" data-id="445546970" data-server="netease" data-type="song" data-mode="single"></div>
 
 <hr>
-<p>今天把清除浮动的方法总结一下，并分析一下他们的优缺点。然后找出当下最适合的清除浮动的方法。</p>
-<h1 id="在浮动元素末尾添加额外标签"><a href="#在浮动元素末尾添加额外标签" class="headerlink" title="在浮动元素末尾添加额外标签"></a>在浮动元素末尾添加额外标签</h1><h2 id="1）添加空标签-lt-div-gt"><a href="#1）添加空标签-lt-div-gt" class="headerlink" title="1）添加空标签 &lt;div&gt;"></a>1）添加空标签 <code>&lt;div&gt;</code></h2><p>示例：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"float"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"clear:both;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"footer"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>这是最早也是最简单的清除浮动的方法。但是在现在看来，这个方法会徒增许多无意义的空标签，<strong>有违结构与表现的分离</strong>，所以<strong>不推荐</strong>。</p>
-<h2 id="2）使用-lt-br-gt-标签"><a href="#2）使用-lt-br-gt-标签" class="headerlink" title="2）使用 &lt;br&gt; 标签"></a>2）使用 <code>&lt;br&gt;</code> 标签</h2><p>示例：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"float"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span> <span class="attr">clear</span>=<span class="string">"all"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"footer"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>这个方法比较小众，<code>&lt;br&gt;</code> 标签自带有 html 属性 clear ，他有三个可选值：left、right 和 all。他比 <code>&lt;div&gt;</code> 空标签的语义稍强，但他同样有违结构与表现的分离，随意也<strong>不推荐</strong>。</p>
-<h1 id="为父元素添加属性-overflow-float-display"><a href="#为父元素添加属性-overflow-float-display" class="headerlink" title="为父元素添加属性 overflow / float / display"></a>为父元素添加属性 overflow / float / display</h1><p>这里涉及到一个知识点：<a href="https://www.w3.org/TR/CSS21/visuren.html#block-formatting" target="_blank" rel="noopener">BFC（ Block formatting contexts ）</a></p>
-<h2 id="1）overflow-hidden"><a href="#1）overflow-hidden" class="headerlink" title="1）overflow: hidden"></a>1）overflow: hidden</h2><p>通过为父元素添加 overflow 属性并设置值 hidden</p>
-
-          
+<p>今天把清除浮动的所有方法总结一下，并分析一下他们的优缺点。然后找出当下最适合的清除浮动的方法（<strong>时间紧张的同学可以直接跳到最后  Orz</strong>）。</p>
+<h1 id="1）在浮动元素末尾添加额外标签"><a href="#1）在浮动元素末尾添加额外标签" class="headerlink" title="1）在浮动元素末尾添加额外标签"></a>1）在浮动元素末尾添加额外标签</h1><h2 id="a-添加空标签-lt-div"><a href="#a-添加空标签-lt-div" class="headerlink" title="a.添加空标签 &lt;div>"></a>a.添加空标签 &lt;div></h2><p>示例：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"clearfix"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"clear:both;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"footer"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/清除浮动的方法和原理/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -869,7 +868,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">688</span>
+    <span title="Site words total count">1.5k</span>
   
 </div>
 
@@ -900,7 +899,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共 688 字</span>
+  <span class="post-count">博客全站共 1.5k 字</span>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
