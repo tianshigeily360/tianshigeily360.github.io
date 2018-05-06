@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[记百度前端 IFE 学院的第一天]]></title>
-    <url>%2F2018%2F04%2F29%2F%E7%99%BE%E5%BA%A6%20IFE%201%2F</url>
-    <content type="text"><![CDATA[在杠姐这首曲子下写作都变得特别有 feel 这个博客建了也有一段日子了，本意是想给自己一个输出的空间，但拖延症都快使我忘记了它。那么借着在百度前端学院学习的日子，好好记录一下自己吧！ 今天主要是将课程中提供的资料阅读一遍，对基础又加深了一些了解。 不过只花了不到两个小时的时间粗读了一遍，以后还要常翻出来看看。 名词的梳理首先要感谢 @知乎张秋怡 的回答，简直对小白太友好了。 前后端的交互 她对于后端的解释让我耳目一新，之前因为只关注前端，所以对后端只是有一个模糊的认识。 浏览器与服务器之间的请求与交互是比较有趣的，他们之间需要指定一种协议（比如 HTTP/HTTPS）和一种数据封装格式（比如 HTML/XML）才能达成交互，这与我们写的前端代码要定下一定的标准比较相像。不过这些都是冰山一角，在以后的学习过程中会逐渐对这些知识产生更深的理解。 HTML 5之前只学习了 HTML 的基础概念，今天了解到了 HTML5 的一些新特性与新标准。 HTML5 Canvas 这个元素可以在网页进行一些动画制作 HTML5 新语义 对页面的不同部分增加了一些新语义 * &lt;article&gt; * &lt;aside&gt; * &lt;details&gt; * &lt;figcaption&gt; * &lt;figure&gt; * &lt;footer&gt; * &lt;header&gt; * &lt;main&gt; * &lt;mark&gt; * &lt;nav&gt; * &lt;section&gt; * &lt;summary&gt; * &lt;time&gt;]]></content>
+    <title><![CDATA[清除浮动的方法和原理]]></title>
+    <url>%2F%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8%E7%9A%84%E6%96%B9%E6%B3%95%E5%92%8C%E5%8E%9F%E7%90%86%2F</url>
+    <content type="text"><![CDATA[今天把清除浮动的方法总结一下，并分析一下他们的优缺点。然后找出当下最适合的清除浮动的方法。 在浮动元素末尾添加额外标签1）添加空标签 &lt;div&gt;示例：123456&lt;div class="float"&gt; &lt;div class="left"&gt;&lt;/div&gt; &lt;div class="right"&gt;&lt;/div&gt; &lt;div style="clear:both;"&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="footer"&gt;&lt;/div&gt; 这是最早也是最简单的清除浮动的方法。但是在现在看来，这个方法会徒增许多无意义的空标签，有违结构与表现的分离，所以不推荐。 2）使用 &lt;br&gt; 标签示例：123456&lt;div class="float"&gt; &lt;div class="left"&gt;&lt;/div&gt; &lt;div class="right"&gt;&lt;/div&gt; &lt;br clear="all" /&gt;&lt;/div&gt;&lt;div class="footer"&gt;&lt;/div&gt; 这个方法比较小众，&lt;br&gt; 标签自带有 html 属性 clear ，他有三个可选值：left、right 和 all。他比 &lt;div&gt; 空标签的语义稍强，但他同样有违结构与表现的分离，随意也不推荐。 为父元素添加属性 overflow / float / display这里涉及到一个知识点：BFC（ Block formatting contexts ） 1）overflow: hidden通过为父元素添加 overflow 属性并设置值 hidden]]></content>
       <categories>
-        <category>百度前端技术学院</category>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>float</tag>
+        <tag>clear</tag>
+        <tag>清除浮动</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[记百度前端 IFE 学院的第一天]]></title>
+    <url>%2F%E7%99%BE%E5%BA%A6%20IFE%201%2F</url>
+    <content type="text"><![CDATA[在杠姐这首曲子下写作都变得特别有 feel 这个博客建了也有一段日子了，本意是想给自己一个输出的空间，但拖延症都快使我忘记了它。那么借着在百度前端学院学习的日子，好好记录一下自己吧！今天主要是将课程中提供的资料阅读一遍，对基础又加深了一些了解。 不过只花了不到两个小时的时间粗读了一遍，以后还要常翻出来看看。 名词的梳理首先要感谢 @知乎张秋怡 的回答，简直对小白太友好了。 前后端的交互 她对于后端的解释让我耳目一新，之前因为只关注前端，所以对后端只是有一个模糊的认识。 浏览器与服务器之间的请求与交互是比较有趣的，他们之间需要指定一种协议（比如 HTTP/HTTPS）和一种数据封装格式（比如 HTML/XML）才能达成交互，这与我们写的前端代码要定下一定的标准比较相像。不过这些都是冰山一角，在以后的学习过程中会逐渐对这些知识产生更深的理解。 HTML 5之前只学习了 HTML 的基础概念，今天了解到了 HTML5 的一些新特性与新标准。 HTML5 Canvas 这个元素可以在网页进行一些动画制作 HTML5 新语义 对页面的不同部分增加了一些新语义 * &lt;article&gt; * &lt;aside&gt; * &lt;details&gt; * &lt;figcaption&gt; * &lt;figure&gt; * &lt;footer&gt; * &lt;header&gt; * &lt;main&gt; * &lt;mark&gt; * &lt;nav&gt; * &lt;section&gt; * &lt;summary&gt; * &lt;time&gt;]]></content>
+      <categories>
+        <category>披星戴月，沉迷学习</category>
       </categories>
       <tags>
         <tag>百度前端学院</tag>

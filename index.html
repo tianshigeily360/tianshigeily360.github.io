@@ -101,7 +101,7 @@
 <meta name="description" content="青春是一场巨大的体力过剩">
 <meta property="og:type" content="website">
 <meta property="og:title" content="JM&#39;s Blog">
-<meta property="og:url" content="http://tianshigeily360.github.io/index.html">
+<meta property="og:url" content="https://jmaking.top/index.html">
 <meta property="og:site_name" content="JM&#39;s Blog">
 <meta property="og:description" content="青春是一场巨大的体力过剩">
 <meta property="og:locale" content="zh-Hans">
@@ -137,7 +137,7 @@
 
 
 
-  <link rel="canonical" href="http://tianshigeily360.github.io/"/>
+  <link rel="canonical" href="https://jmaking.top/"/>
 
 
 
@@ -328,7 +328,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tianshigeily360.github.io/2018/04/29/百度 IFE 1/">
+    <link itemprop="mainEntityOfPage" href="https://jmaking.top/清除浮动的方法和原理/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="J、Making">
@@ -347,7 +347,204 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/04/29/百度 IFE 1/" itemprop="url">记百度前端 IFE 学院的第一天</a></h1>
+                <a class="post-title-link" href="/清除浮动的方法和原理/" itemprop="url">清除浮动的方法和原理</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-05T18:17:46+08:00">
+                2018-05-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CSS/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/清除浮动的方法和原理/" class="leancloud_visitors" data-flag-title="清除浮动的方法和原理">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  283 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <div class="aplayer" data-id="445546970" data-server="netease" data-type="song" data-mode="single"></div>
+
+<hr>
+<p>今天把清除浮动的方法总结一下，并分析一下他们的优缺点。然后找出当下最适合的清除浮动的方法。</p>
+<h1 id="在浮动元素末尾添加额外标签"><a href="#在浮动元素末尾添加额外标签" class="headerlink" title="在浮动元素末尾添加额外标签"></a>在浮动元素末尾添加额外标签</h1><h2 id="1）添加空标签-lt-div-gt"><a href="#1）添加空标签-lt-div-gt" class="headerlink" title="1）添加空标签 &lt;div&gt;"></a>1）添加空标签 <code>&lt;div&gt;</code></h2><p>示例：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"float"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"clear:both;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"footer"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>这是最早也是最简单的清除浮动的方法。但是在现在看来，这个方法会徒增许多无意义的空标签，<strong>有违结构与表现的分离</strong>，所以<strong>不推荐</strong>。</p>
+<h2 id="2）使用-lt-br-gt-标签"><a href="#2）使用-lt-br-gt-标签" class="headerlink" title="2）使用 &lt;br&gt; 标签"></a>2）使用 <code>&lt;br&gt;</code> 标签</h2><p>示例：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"float"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span> <span class="attr">clear</span>=<span class="string">"all"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"footer"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>这个方法比较小众，<code>&lt;br&gt;</code> 标签自带有 html 属性 clear ，他有三个可选值：left、right 和 all。他比 <code>&lt;div&gt;</code> 空标签的语义稍强，但他同样有违结构与表现的分离，随意也<strong>不推荐</strong>。</p>
+<h1 id="为父元素添加属性-overflow-float-display"><a href="#为父元素添加属性-overflow-float-display" class="headerlink" title="为父元素添加属性 overflow / float / display"></a>为父元素添加属性 overflow / float / display</h1><p>这里涉及到一个知识点：<a href="https://www.w3.org/TR/CSS21/visuren.html#block-formatting" target="_blank" rel="noopener">BFC（ Block formatting contexts ）</a></p>
+<h2 id="1）overflow-hidden"><a href="#1）overflow-hidden" class="headerlink" title="1）overflow: hidden"></a>1）overflow: hidden</h2><p>通过为父元素添加 overflow 属性并设置值 hidden</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jmaking.top/百度 IFE 1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="J、Making">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JM's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/百度 IFE 1/" itemprop="url">记百度前端 IFE 学院的第一天</a></h1>
         
 
         <div class="post-meta">
@@ -382,8 +579,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/百度前端技术学院/" itemprop="url" rel="index">
-                    <span itemprop="name">百度前端技术学院</span>
+                  <a href="/categories/披星戴月，沉迷学习/" itemprop="url" rel="index">
+                    <span itemprop="name">披星戴月，沉迷学习</span>
                   </a>
                 </span>
 
@@ -399,7 +596,7 @@
 
           
           
-             <span id="/2018/04/29/百度 IFE 1/" class="leancloud_visitors" data-flag-title="记百度前端 IFE 学院的第一天">
+             <span id="/百度 IFE 1/" class="leancloud_visitors" data-flag-title="记百度前端 IFE 学院的第一天">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -464,9 +661,12 @@
         
           <p><div class="aplayer" data-id="553813053" data-server="netease" data-type="song" data-mode="single"></div></p>
 <center><code>在杠姐这首曲子下写作都变得特别有 feel</code></center>
+
+<hr>
+<p><em>这个博客建了也有一段日子了，本意是想给自己一个输出的空间，但拖延症都快使我忘记了它。<br>那么借着在百度前端学院学习的日子，好好记录一下自己吧！</em><br>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/04/29/百度 IFE 1/#more" rel="contents">
+            <a class="btn" href="/百度 IFE 1/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -558,7 +758,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -569,7 +769,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -580,7 +780,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -669,7 +869,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">405</span>
+    <span title="Site words total count">688</span>
   
 </div>
 
@@ -700,7 +900,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共 405 字</span>
+  <span class="post-count">博客全站共 688 字</span>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
