@@ -98,18 +98,15 @@
 
 
 
-<meta name="description" content="今天把清除浮动的所有方法总结一下，并分析一下他们的优缺点。然后找出当下最适合的清除浮动的方法（时间紧张的同学可以直接跳到最后  Orz）。 1）在浮动元素末尾添加额外标签">
 <meta name="keywords" content="float,clear,清除浮动">
 <meta property="og:type" content="article">
 <meta property="og:title" content="清除浮动的方法和原理">
 <meta property="og:url" content="https://jmaking.top/清除浮动的方法和原理/index.html">
 <meta property="og:site_name" content="JM&#39;s Blog">
-<meta property="og:description" content="今天把清除浮动的所有方法总结一下，并分析一下他们的优缺点。然后找出当下最适合的清除浮动的方法（时间紧张的同学可以直接跳到最后  Orz）。 1）在浮动元素末尾添加额外标签">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-06T08:59:10.206Z">
+<meta property="og:updated_time" content="2018-05-06T13:44:48.795Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="清除浮动的方法和原理">
-<meta name="twitter:description" content="今天把清除浮动的所有方法总结一下，并分析一下他们的优缺点。然后找出当下最适合的清除浮动的方法（时间紧张的同学可以直接跳到最后  Orz）。 1）在浮动元素末尾添加额外标签">
 
 
 
@@ -460,12 +457,10 @@
       
 
       
-        <div class="aplayer" data-id="445546970" data-server="netease" data-type="song" data-mode="single"></div>
-
+        <p><div class="aplayer" data-id="445546970" data-server="netease" data-type="song" data-mode="single"></div><br><a id="more"></a></p>
 <hr>
 <p>今天把清除浮动的所有方法总结一下，并分析一下他们的优缺点。然后找出当下最适合的清除浮动的方法（<strong>时间紧张的同学可以直接跳到最后  Orz</strong>）。</p>
-<h1 id="1）在浮动元素末尾添加额外标签"><a href="#1）在浮动元素末尾添加额外标签" class="headerlink" title="1）在浮动元素末尾添加额外标签"></a>1）在浮动元素末尾添加额外标签</h1><a id="more"></a>
-<h2 id="a-添加空标签-lt-div"><a href="#a-添加空标签-lt-div" class="headerlink" title="a.添加空标签 &lt;div>"></a>a.添加空标签 &lt;div></h2><p>示例：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"clearfix"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"clear:both;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"footer"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="1）在浮动元素末尾添加额外标签"><a href="#1）在浮动元素末尾添加额外标签" class="headerlink" title="1）在浮动元素末尾添加额外标签"></a>1）在浮动元素末尾添加额外标签</h1><h2 id="a-添加空标签-lt-div"><a href="#a-添加空标签-lt-div" class="headerlink" title="a.添加空标签 &lt;div>"></a>a.添加空标签 &lt;div></h2><p>示例：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"clearfix"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"clear:both;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"footer"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>这是最早也是最简单的清除浮动的方法。但是在现在看来，这个方法会徒增许多无意义的空标签，<strong>有违结构与表现的分离</strong>，所以<strong>不推荐</strong>。</p>
 <h2 id="b-使用-lt-br-标签"><a href="#b-使用-lt-br-标签" class="headerlink" title="b.使用 &lt;br> 标签"></a>b.使用 &lt;br> 标签</h2><p>示例：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"clearfix"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span> <span class="attr">clear</span>=<span class="string">"all"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"footer"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>这个方法比较小众，<code>&lt;br&gt;</code> 标签自带有 html 属性 clear ，他有三个可选值：left、right 和 all。他比 <code>&lt;div&gt;</code> 空标签的语义稍强，但他同样有违结构与表现的分离，随意也<strong>不推荐</strong>。</p>
@@ -688,7 +683,7 @@
                 alt="J、Making" />
             
               <p class="site-author-name" itemprop="name">J、Making</p>
-              <p class="site-description motion-element" itemprop="description">青春是一场巨大的体力过剩</p>
+              <p class="site-description motion-element" itemprop="description">人需要思想，如同需要水和空气一样。</p>
           </div>
 
           <nav class="site-state motion-element">
