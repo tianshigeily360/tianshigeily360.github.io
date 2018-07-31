@@ -100,13 +100,15 @@
 
 <meta name="keywords" content="百度前端学院,IFE">
 <meta property="og:type" content="article">
-<meta property="og:title" content="记百度前端 IFE 学院的第一天">
+<meta property="og:title" content="HTML5">
 <meta property="og:url" content="https://jmaking.top/百度 IFE 1/index.html">
 <meta property="og:site_name" content="JM&#39;s Blog">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-07T02:42:32.438Z">
+<meta property="og:image" content="http://hexo-images.oss-cn-beijing.aliyuncs.com/18-7-31/67567008.jpg">
+<meta property="og:updated_time" content="2018-07-31T14:40:37.683Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="记百度前端 IFE 学院的第一天">
+<meta name="twitter:title" content="HTML5">
+<meta name="twitter:image" content="http://hexo-images.oss-cn-beijing.aliyuncs.com/18-7-31/67567008.jpg">
 
 
 
@@ -142,7 +144,7 @@
 
 
 
-  <title>记百度前端 IFE 学院的第一天 | JM's Blog</title>
+  <title>HTML5 | JM's Blog</title>
   
 
 
@@ -343,7 +345,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">记百度前端 IFE 学院的第一天</h1>
+          <h1 class="post-title" itemprop="name headline">HTML5</h1>
         
 
         <div class="post-meta">
@@ -378,8 +380,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/披星戴月，沉迷学习/" itemprop="url" rel="index">
-                    <span itemprop="name">披星戴月，沉迷学习</span>
+                  <a href="/categories/HTML/" itemprop="url" rel="index">
+                    <span itemprop="name">HTML</span>
                   </a>
                 </span>
 
@@ -395,7 +397,7 @@
 
           
           
-             <span id="/百度 IFE 1/" class="leancloud_visitors" data-flag-title="记百度前端 IFE 学院的第一天">
+             <span id="/百度 IFE 1/" class="leancloud_visitors" data-flag-title="HTML5">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -420,7 +422,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  542 字
+                  817 字
                 </span>
               
 
@@ -436,7 +438,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2 分钟
+                  3 分钟
                 </span>
               
             </div>
@@ -461,34 +463,76 @@
 <center><code>在杠姐这首曲子下写作都变得特别有 feel</code></center>
 
 <hr>
-<p><em>这个博客建了也有一段日子了，本意是想给自己一个输出的空间，但拖延症都快使我忘记了它。<br>那么借着在百度前端学院学习的日子，好好记录一下自己吧！</em></p>
-<p>今天主要是将课程中提供的资料阅读一遍，对基础又加深了一些了解。 不过只花了不到两个小时的时间粗读了一遍，以后还要常翻出来看看。</p>
-<h1 id="名词的梳理"><a href="#名词的梳理" class="headerlink" title="名词的梳理"></a>名词的梳理</h1><p>首先要感谢 <a href="https://www.zhihu.com/people/zhang-qiu-yi-27" target="_blank" rel="noopener">@知乎张秋怡</a> 的<a href="https://www.zhihu.com/question/22689579/answer/22318058" target="_blank" rel="noopener">回答</a>，简直对小白太友好了。</p>
-<blockquote>
-<h2 id="前后端的交互"><a href="#前后端的交互" class="headerlink" title="前后端的交互"></a>前后端的交互</h2></blockquote>
-<p>她对于后端的解释让我耳目一新，之前因为只关注前端，所以对后端只是有一个模糊的认识。</p>
-<p>浏览器与服务器之间的请求与交互是比较有趣的，他们之间需要指定一种协议（比如 HTTP/HTTPS）和一种数据封装格式（比如 HTML/XML）才能达成交互，这与我们写的前端代码要定下一定的标准比较相像。不过这些都是冰山一角，在以后的学习过程中会逐渐对这些知识产生更深的理解。</p>
+<p><em>这个博客建了也有一段日子了，本意是想给自己一个输出的空间，但拖延症都快使我忘记了它。</em></p>
 <h1 id="HTML-5"><a href="#HTML-5" class="headerlink" title="HTML 5"></a>HTML 5</h1><p>之前只学习了 HTML 的基础概念，今天了解到了 HTML5 的一些新特性与新标准。</p>
+<h2 id="新语义标签"><a href="#新语义标签" class="headerlink" title="新语义标签"></a>新语义标签</h2><blockquote>
+<p>对页面的不同部分增加了一些新语义标签</p>
+<pre><code>*   &lt;article&gt;          &lt;!--定义文章--&gt;
+*   &lt;aside&gt;           &lt;!--定义页面内容以外的内容--&gt;
+*   &lt;details&gt;         &lt;!--定义用户能够查看或者隐藏的细节--&gt;
+*   &lt;figcaption&gt;       &lt;!--定义 &lt;figure&gt; 元素的标题--&gt;
+*   &lt;figure&gt;          &lt;!--定义自包含内容，如图示、图表、照片、代码清单等--&gt;
+*   &lt;footer&gt;          &lt;!--定义文档或节的页脚--&gt;
+*   &lt;header&gt;        &lt;!--定义文档或节的页眉--&gt;
+*   &lt;main&gt;           &lt;!--定义文档的主内容--&gt;
+*   &lt;mark&gt;           &lt;!--定义重要或强调的文本--&gt;
+*   &lt;nav&gt;              &lt;!--定义导航链接--&gt;
+*   &lt;section&gt;        &lt;!--定义文档中的节（节是有主题的内容组，通常有标题）--&gt;
+*   &lt;summary&gt;          &lt;!--定义 &lt;details&gt; 元素的可见标题--&gt;
+*   &lt;time&gt;             &lt;!--定义日期或时间--&gt;
+</code></pre></blockquote>
+<h2 id="新表单"><a href="#新表单" class="headerlink" title="新表单"></a>新表单</h2><h4 id="新表单类型"><a href="#新表单类型" class="headerlink" title="新表单类型"></a>新表单类型</h4><blockquote>
+<pre><code>*   email        &lt;!--只能输入email格式，自动带有验证功能 --&gt;
+*   tel          &lt;!--手机号码--&gt;
+*   url          &lt;!--只能输入url 格式--&gt;
+*  number        &lt;!--只能输入数字--&gt;
+*   search         &lt;!--搜索框--&gt;
+* range           &lt;!--滑动条--&gt;
+*   color        &lt;!--拾色器--&gt;
+*  time           &lt;!--时间--&gt;
+*  date           &lt;!--日期--&gt;
+*   --datetime    &lt;!--时间日期--&gt;
+* month           &lt;!--月份--&gt;
+*   week          &lt;!--星期--&gt;
+</code></pre></blockquote>
+<h4 id="新表单元素（标签）"><a href="#新表单元素（标签）" class="headerlink" title="新表单元素（标签）"></a>新表单元素（标签）</h4><h5 id="数据列表"><a href="#数据列表" class="headerlink" title=" 数据列表"></a><datalist> 数据列表</datalist></h5><p>可以为 input 输入框添加自动提示</p>
+<p>eg.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">list</span>=<span class="string">"myData"</span>&gt;</span> //把 input 中的 list 属性与 datalist 进行绑定</span><br><span class="line"><span class="tag">&lt;<span class="name">datalist</span> <span class="attr">id</span>=<span class="string">"myData"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">option</span>&gt;</span>本科<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">option</span>&gt;</span>研究生<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">option</span>&gt;</span>不明<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">datalist</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<p><img src="http://hexo-images.oss-cn-beijing.aliyuncs.com/18-7-31/67567008.jpg" alt=""></p>
+<h4 id="新表单属性"><a href="#新表单属性" class="headerlink" title="新表单属性"></a>新表单属性</h4><blockquote>
+<pre><code>*  placeholder         &lt;!--占位符（提示文字）--&gt;
+*  autofocus         &lt;!--自动获取焦点--&gt;
+*  multiple         &lt;!--文件上传多选或多个邮箱地址--&gt;
+*  autocomplete         &lt;!--自动完成（填充的）。on 开启（默认），off 取消。用于表单元素，也可用于表单自身(on/off)--&gt;
+*  form         &lt;!--指定表单项属于哪个form，处理复杂表单时会需要--&gt;
+*  novalidate         &lt;!--关闭默认的验证功能（只能加给form）--&gt;
+*  required         &lt;!--表示必填项--&gt;
+*  pattern         &lt;!--自定义正则，验证表单--&gt;
+</code></pre></blockquote>
+<h2 id="多媒体"><a href="#多媒体" class="headerlink" title="多媒体"></a>多媒体</h2><h4 id="音频"><a href="#音频" class="headerlink" title="音频 "></a>音频 <audio></audio></h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">audio</span> <span class="attr">src</span>=<span class="string">"music/yinyue.mp3"</span> <span class="attr">autoplay</span> <span class="attr">controls</span>&gt;</span> <span class="tag">&lt;/<span class="name">audio</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <blockquote>
-<h2 id="HTML5-Canvas"><a href="#HTML5-Canvas" class="headerlink" title="HTML5 Canvas"></a>HTML5 Canvas</h2></blockquote>
-<p>这个元素可以在网页进行一些动画制作</p>
+<pre><code>* autoplay          &lt;!--自动播放，写成 autoplay 或者 autoplay = &quot;&quot;，都可以--&gt;
+*  controls          &lt;!--控制条（建议把这个选项写上，不然都看不到控件在哪里）--&gt;
+*  loop          &lt;!--循环播放--&gt;
+*  preload          &lt;!--预加载 同时设置 autoplay 时，此属性将失效--&gt;
+</code></pre></blockquote>
+<p><strong>音频格式的兼容性写法</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">audio</span> <span class="attr">controls</span> <span class="attr">loop</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"music/yinyue.mp3"</span>/&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"music/yinyue.ogg"</span>/&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"music/yinyue.wav"</span>/&gt;</span></span><br><span class="line">	抱歉，你的浏览器暂不支持此音频格式</span><br><span class="line"><span class="tag">&lt;/<span class="name">audio</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="视频"><a href="#视频" class="headerlink" title="视频 "></a>视频 <video></video></h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">video</span> <span class="attr">src</span>=<span class="string">"video/movie.mp4"</span> <span class="attr">controls</span> <span class="attr">autoplay</span>&gt;</span><span class="tag">&lt;/<span class="name">video</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <blockquote>
-<h2 id="HTML5-新语义"><a href="#HTML5-新语义" class="headerlink" title="HTML5 新语义"></a>HTML5 新语义</h2></blockquote>
-<p>对页面的不同部分增加了一些新语义</p>
-<pre><code>*   &lt;article&gt;         // 定义文章
-*   &lt;aside&gt;           // 定义页面内容以外的内容
-*   &lt;details&gt;         // 定义用户能够查看或者隐藏的细节
-*   &lt;figcaption&gt;      // 定义 &lt;figure&gt; 元素的标题
-*   &lt;figure&gt;          // 定义自包含内容，如图示、图表、照片、代码清单等
-*   &lt;footer&gt;          // 定义文档或节的页脚
-*   &lt;header&gt;          // 定义文档或节的页眉
-*   &lt;main&gt;            // 定义文档的主内容
-*   &lt;mark&gt;            // 定义重要或强调的文本
-*   &lt;nav&gt;             // 定义导航链接
-*   &lt;section&gt;         // 定义文档中的节（节是有主题的内容组，通常有标题）
-*   &lt;summary&gt;         // 定义 &lt;details&gt; 元素的可见标题
-*   &lt;time&gt;            // 定义日期或时间
-</code></pre>
+<pre><code>* autoplay          &lt;!--自动播放，写成 autoplay 或者 autoplay = &quot;&quot;，都可以--&gt;
+*  controls          &lt;!--控制条（建议把这个选项写上，不然都看不到控件在哪里）--&gt;
+*  loop          &lt;!--循环播放--&gt;
+*  preload          &lt;!--预加载 同时设置 autoplay 时，此属性将失效--&gt;
+*  width          &lt;!--设置播放窗口宽度--&gt;
+*  height          &lt;!--设置播放窗口的高度--&gt;
+</code></pre></blockquote>
+<p><strong>视频格式的兼容性写法</strong> </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">video</span> <span class="attr">controls</span> <span class="attr">autoplay</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"video/movie.mp4"</span>/&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"video/movie.ogg"</span>/&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"video/movie.webm"</span>/&gt;</span></span><br><span class="line">	抱歉，不支持此视频</span><br><span class="line"><span class="tag">&lt;/<span class="name">video</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h2><p>关于 HTML5 还有一些其他的知识，在我总结的思维导图里比较全。</p>
+<p>链接：<a href="https://pan.baidu.com/s/1Ae_6sdNWKqyQJ4XbOeS8bQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1Ae_6sdNWKqyQJ4XbOeS8bQ</a> 密码：3qwe</p>
+
       
     </div>
     
@@ -505,10 +549,10 @@
     <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
     <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
     <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
-    <p><span>本文标题:</span><a href="/百度 IFE 1/">记百度前端 IFE 学院的第一天</a></p>
+    <p><span>本文标题:</span><a href="/百度 IFE 1/">HTML5</a></p>
     <p><span>文章作者:</span><a href="/" title="访问 J、Making 的个人博客">J、Making</a></p>
     <p><span>发布时间:</span>2018年04月29日 - 19:04</p>
-    <p><span>原始链接:</span><a href="/百度 IFE 1/" title="记百度前端 IFE 学院的第一天">https://jmaking.top/百度 IFE 1/</a>
+    <p><span>原始链接:</span><a href="/百度 IFE 1/" title="HTML5">https://jmaking.top/百度 IFE 1/</a>
         <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://jmaking.top/百度 IFE 1/"  aria-label="复制成功！"></i></span>
     </p>
     <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
@@ -780,7 +824,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#名词的梳理"><span class="nav-number">1.</span> <span class="nav-text">名词的梳理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#前后端的交互"><span class="nav-number">1.1.</span> <span class="nav-text">前后端的交互</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HTML-5"><span class="nav-number">2.</span> <span class="nav-text">HTML 5</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML5-Canvas"><span class="nav-number">2.1.</span> <span class="nav-text">HTML5 Canvas</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML5-新语义"><span class="nav-number">2.2.</span> <span class="nav-text">HTML5 新语义</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HTML-5"><span class="nav-number">1.</span> <span class="nav-text">HTML 5</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#新语义标签"><span class="nav-number">1.1.</span> <span class="nav-text">新语义标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#新表单"><span class="nav-number">1.2.</span> <span class="nav-text">新表单</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#新表单类型"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">新表单类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#新表单元素（标签）"><span class="nav-number">1.2.0.2.</span> <span class="nav-text">新表单元素（标签）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#数据列表"><span class="nav-number">1.2.0.2.1.</span> <span class="nav-text"> 数据列表</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#新表单属性"><span class="nav-number">1.2.0.3.</span> <span class="nav-text">新表单属性</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多媒体"><span class="nav-number">1.3.</span> <span class="nav-text">多媒体</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#音频"><span class="nav-number">1.3.0.1.</span> <span class="nav-text">音频 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#视频"><span class="nav-number">1.3.0.2.</span> <span class="nav-text">视频 </span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#思维导图"><span class="nav-number">1.4.</span> <span class="nav-text">思维导图</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -817,7 +861,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">1.6k</span>
+    <span title="Site words total count">1.9k</span>
   
 </div>
 
@@ -848,7 +892,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共 1.6k 字</span>
+  <span class="post-count">博客全站共 1.9k 字</span>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
