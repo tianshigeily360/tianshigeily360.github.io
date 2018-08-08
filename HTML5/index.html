@@ -105,7 +105,7 @@
 <meta property="og:site_name" content="JM&#39;s Blog">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://hexo-images.oss-cn-beijing.aliyuncs.com/18-7-31/67567008.jpg">
-<meta property="og:updated_time" content="2018-08-06T12:40:39.116Z">
+<meta property="og:updated_time" content="2018-08-08T13:35:22.484Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTML5">
 <meta name="twitter:image" content="http://hexo-images.oss-cn-beijing.aliyuncs.com/18-7-31/67567008.jpg">
@@ -474,19 +474,19 @@
 <pre><code>*   email        &lt;!--只能输入email格式，自动带有验证功能 --&gt;
 *   tel          &lt;!--手机号码--&gt;
 *   url          &lt;!--只能输入url 格式--&gt;
-*  number        &lt;!--只能输入数字--&gt;
+*   number        &lt;!--只能输入数字--&gt;
 *   search         &lt;!--搜索框--&gt;
-* range           &lt;!--滑动条--&gt;
+*   range           &lt;!--滑动条--&gt;
 *   color        &lt;!--拾色器--&gt;
-*  time           &lt;!--时间--&gt;
-*  date           &lt;!--日期--&gt;
+*   time           &lt;!--时间--&gt;
+*   date           &lt;!--日期--&gt;
 *   --datetime    &lt;!--时间日期--&gt;
-* month           &lt;!--月份--&gt;
+*   month           &lt;!--月份--&gt;
 *   week          &lt;!--星期--&gt;
 </code></pre></blockquote>
 <h2 id="新表单元素（标签）"><a href="#新表单元素（标签）" class="headerlink" title="新表单元素（标签）"></a>新表单元素（标签）</h2><h3 id="lt-datalist-gt-数据列表"><a href="#lt-datalist-gt-数据列表" class="headerlink" title="&lt;datalist&gt; 数据列表"></a><code>&lt;datalist&gt;</code> 数据列表</h3><p>可以为 input 输入框添加自动提示</p>
 <p>eg.</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">list</span>=<span class="string">"myData"</span>&gt;</span> //把 input 中的 list 属性与 datalist 进行绑定</span><br><span class="line"><span class="tag">&lt;<span class="name">datalist</span> <span class="attr">id</span>=<span class="string">"myData"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">option</span>&gt;</span>本科<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">option</span>&gt;</span>研究生<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">option</span>&gt;</span>不明<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">datalist</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">list</span>=<span class="string">"myData"</span>&gt;</span> <span class="comment">&lt;!--把 input 中的 list 属性与 datalist 进行绑定--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">datalist</span> <span class="attr">id</span>=<span class="string">"myData"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">option</span>&gt;</span>本科<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">option</span>&gt;</span>研究生<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">option</span>&gt;</span>不明<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">datalist</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>效果如下：</p>
 <p><img src="http://hexo-images.oss-cn-beijing.aliyuncs.com/18-7-31/67567008.jpg" alt=""></p>
 <h2 id="新表单属性"><a href="#新表单属性" class="headerlink" title="新表单属性"></a>新表单属性</h2><blockquote>
