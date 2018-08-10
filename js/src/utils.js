@@ -142,7 +142,7 @@ NexT.utils = NexT.$u = {
         // Calculate the video ratio based on the iframe's w/h dimensions
         var videoRatio = getAspectRadio(oldDimension.width, oldDimension.height);
 
-        // Replace the iframe's dimensions and position the iframe absolute
+        // Replace the iframe's dimensions and position the iframe absolute-ml
         // This is the trick to emulate the video ratio
         $iframe.width('100%').height('100%')
           .css({
