@@ -1,0 +1,23 @@
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>html,body {
+    height: 100%;
+}
+
+.left,.right {
+    width: 300px;
+    height: 100%;
+    background-color: #5295ff;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.main {
+    height: 100%;
+    margin: 0 300px;
+    background-color: #ff6700;
+}
