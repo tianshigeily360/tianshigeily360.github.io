@@ -2,20 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://jmaking.top/three_colum_layout/absolute/index.html</loc>
-    
-    <lastmod>2018-08-10T09:19:30.762Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jmaking.top/three_colum_layout/float/index.html</loc>
-    
-    <lastmod>2018-08-10T09:19:30.742Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://jmaking.top/%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80/</loc>
     
     <lastmod>2018-08-10T09:17:35.646Z</lastmod>
@@ -44,23 +30,9 @@
   </url>
   
   <url>
-    <loc>https://jmaking.top/three_colum_layout/flex/index.html</loc>
-    
-    <lastmod>2018-08-08T02:47:36.526Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://jmaking.top/demo/index.html</loc>
     
     <lastmod>2018-08-02T02:31:01.106Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jmaking.top/three_colum_layout/margin/float-margin.html</loc>
-    
-    <lastmod>2018-05-27T09:12:50.000Z</lastmod>
     
   </url>
   
