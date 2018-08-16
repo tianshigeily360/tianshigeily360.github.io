@@ -105,7 +105,7 @@
 <meta property="og:site_name" content="JM&#39;s Blog">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://jmaking.top/demo/PSD/前端学院设计图.jpg">
-<meta property="og:updated_time" content="2018-08-16T08:48:09.776Z">
+<meta property="og:updated_time" content="2018-08-16T13:43:50.064Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="仿了个静态页面 (1)">
 <meta name="twitter:image" content="https://jmaking.top/demo/PSD/前端学院设计图.jpg">
@@ -412,7 +412,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  703 字
+                  735 字
                 </span>
               
 
@@ -475,8 +475,12 @@
 <td>把文字的行高与其本身高度设置相同，不过仅适用只有一行文字的情况</td>
 </tr>
 <tr>
-<td>绝对定位</td>
+<td><code>absolute + margin</code></td>
 <td>为设置了 <code>position: absolute</code> 的元素设置其 <code>left</code> 或 <code>top</code> 属性为 50%，然后再通过 <code>margin-left: -(元素宽度的一半)px</code> 或 <code>margin-top: -(元素高度的一半)px</code> 将其拉至居中</td>
+</tr>
+<tr>
+<td><code>absolute + translate</code></td>
+<td>和上一个方法类似，不过使用了 <code>CSS3</code> 的属性，<code>transform: translate(-50%,-50%)</code> 可以直接使用百分比居中</td>
 </tr>
 </tbody>
 </table>
@@ -663,6 +667,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/仿了个静态页面-2/" rel="prev" title="仿了个静态页面 (2)">
+                仿了个静态页面 (2) <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -753,7 +761,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -880,7 +888,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">4.1k</span>
+    <span title="Site words total count">4.3k</span>
   
 </div>
 
@@ -911,7 +919,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共 4.1k 字</span>
+  <span class="post-count">博客全站共 4.3k 字</span>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
