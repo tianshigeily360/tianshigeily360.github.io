@@ -104,7 +104,7 @@
 <meta property="og:url" content="https://jmaking.top/三栏布局/index.html">
 <meta property="og:site_name" content="JM&#39;s Blog">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-16T07:51:42.995Z">
+<meta property="og:updated_time" content="2019-03-16T08:16:00.166Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="三栏布局">
 
@@ -410,7 +410,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  715 字
+                  759 字
                 </span>
               
 
@@ -456,7 +456,7 @@
 <p>这个方法最简单，左侧 <code>float:left</code> ，右侧 <code>float:right</code> ，中间主体实现自适应。不过就是 <code>HTML</code> 布局要将主体部分放在最后，左右栏随意布置。但是中间主体存在克星，<code>clear:both</code> 属性，如果要使用此方法，需避免明显的clear样式。 </p>
 <p><a href="https://jmaking.top/three_colum_layout/float">demo</a></p>
 <h1 id="绝对定位法"><a href="#绝对定位法" class="headerlink" title="绝对定位法"></a>绝对定位法</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">html</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.left</span>,<span class="selector-class">.right</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#5295ff</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.left</span> &#123;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.right</span> &#123;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.main</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> <span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#ff6700</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这个方法是左右两栏通过绝对定位固定在页面两侧，然后为中间的主体栏添加左右 <code>margin</code> 值撑开。这里左中右三栏的 <code>HTML</code> 布局顺序任意。</p>
+<p>这个方法是左右两栏通过绝对定位固定在页面两侧，然后为中间的主体栏添加左右 <code>margin</code> 值撑开。这里左中右三栏的 <code>HTML</code> 布局顺序任意。缺点是如果左右两栏盒子高度大于中间盒子，因为绝对定位的关系，会撑不起父盒子的高度，造成高度塌陷。</p>
 <p><a href="https://jmaking.top/three_colum_layout/absolute">demo</a></p>
 <h1 id="Flex-布局法"><a href="#Flex-布局法" class="headerlink" title="Flex 布局法"></a>Flex 布局法</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">html</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.left</span>,<span class="selector-class">.right</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#5295ff</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.right</span> &#123;</span><br><span class="line">    <span class="attribute">order</span>: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.main</span> &#123;</span><br><span class="line">    <span class="attribute">flex</span>: <span class="number">1</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#ff6700</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>Flex 方法也是简单好用的，不过还是因为兼容性的问题只适应现代浏览器。这里给右侧盒子添加 <code>order:1</code> 属性可以将它排在最后，否则根据上面 <code>HTML</code> 布局顺序，会出现在中间。然后给中间栏设置 <code>flex:1</code> 属性让他占满剩余的空间。</p>
@@ -783,7 +783,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">6.1k</span>
+    <span title="Site words total count">6.3k</span>
   
 </div>
 
@@ -814,7 +814,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共 6.1k 字</span>
+  <span class="post-count">博客全站共 6.3k 字</span>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
