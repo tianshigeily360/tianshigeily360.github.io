@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[图片和文字居中对齐的三种方式]]></title>
+    <url>%2F%E5%9B%BE%E7%89%87%E5%92%8C%E6%96%87%E5%AD%97%E5%B1%85%E4%B8%AD%E5%AF%B9%E9%BD%90%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[图片浮动，文字加边距实现图： 实现代码： 1234&lt;div class="box"&gt; &lt;img src="imgs/img1.PNG" alt=""&gt; &lt;p&gt;哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇&lt;/p&gt;&lt;/div&gt; 12345678910111213.box &#123; background: #16b6b6; height: 500px;&#125;.box img &#123; float: left;&#125;.box p &#123; padding-top: 10px; padding-left: 50px;&#125; 这个方法比较简单好理解，先浮动 img，让图片和文字同处一行，然后通过 padding 调整文字位置使其居中，不过这里因为浮动元素脱离文档流，所以文字的左边距还需要加上图片的宽度。文字也可以使用 margin，但是要为父元素设置 border，不然 margin 会和父元素合并，变成父盒子与其他盒子的外边距。 把图片设做 background实现代码： 123&lt;div class="box"&gt; &lt;p&gt;哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇&lt;/p&gt;&lt;/div&gt; 1234567891011.box &#123; background: #16b6b6; height: 500px;&#125;.box p &#123; height: 40px; background: url(one/images/header2.png) no-repeat; padding-top: 10px; padding-left: 50px;&#125; 这种方法是将图片和文字看作一个整体，把图片当作文字的背景图展示，然后给文字部分设置 padding 添加和图片之间的距离。不过这种方法如果文字部分是行内元素的话，是要设置布局为块元素，然后添加宽高属性才能设置背景图的。 利用 vertical-align这个属性还要分几种情况： 盒子高度由图片撑起实现图： 实现代码： 1234&lt;div class="box"&gt; &lt;img src="imgs/img2.PNG" alt=""&gt; &lt;p&gt;哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇&lt;/p&gt;&lt;/div&gt; 1234567891011.box &#123; background: #16b6b6;&#125;.box img &#123; vertical-align: middle;&#125;.box p &#123; display: inline-block;&#125; 当容器盒子高度完全由图片撑起来时，文字的行高也跟随盒子高度自适应，所以只要设置图片垂直对齐方式 vertical-align 为中线 middle，图片和文字就能够居中对齐。如果这里文字部分不是 p 这种块元素，而只是一个行内元素的话，就可以省略掉 display: inline-block 属性，只需要 vertical-align: middle 一条属性就够了，十分简洁。 盒子高度大于图片实现图： 实现代码： 1234&lt;div class="box"&gt; &lt;img src="one/images/course3.png" alt=""&gt; &lt;p&gt;哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇&lt;/p&gt;&lt;/div&gt; 12345678910111213.box &#123; background: #16b6b6; height: 500px; line-height: 500px;&#125;.box img &#123; vertical-align: middle;&#125;.box p &#123; display: inline-block;&#125; 这种方法主要涉及到 line-height 与 vertical-align 的关系，可以在 上篇文章 理清他们的关系。]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+        <tag>float</tag>
+        <tag>line-height</tag>
+        <tag>vertical-align</tag>
+        <tag>margin</tag>
+        <tag>padding</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[line-height 与 vertical-align]]></title>
     <url>%2Fline-height%20%E4%B8%8E%20vertical-align%2F</url>
     <content type="text"><![CDATA[基本概念line-height定义：两行文字基线之间的距离。 vertical-align定义：指定元素的垂直方向对齐方式。 vertical-align起作用的前提是元素为inline水平元素或table-cell元素，且默认对齐方式是 baseline。 联系这两个属性看似关系不大，但实际联系很密切，因为 vertical-align 属性值的计算方式是相对于 line-height 的。 现象 img 的底部间隙在一个 div 中放一个 img ，底部会有一点空白间隙 原因：元素默认情况下对齐方式是基线对齐，即 baseline。而在浏览器中，都有默认的字体的大小，这个空隙就是来源于这个。虽然 div 中只有一个 img 标签，但其实还存在一个我们看不到的空白节点，它类似文本节点，具有文字的大小、行高（可以把它想象成一个宽度为 0 的文本节点）。因此，图片为了保持与基线对齐，底部就必须留出空隙，大小为半倍文本间距（(line-height - font-size)/2）。 解决办法：将 line-height 和 vetical-align 属性的其中一个给干掉 （1）将图片设置为display:block（利用vertical-align的生效前提）； （2）将vertical-align设置为top，bottom，或者middle等值（利用属性值的表现行为）； （3）将line-height设置为0（利用line-height为0时，基线上移）； （4）将font-size设置为0 （如果line-height的值为相对值，如1.5）； （5）将img设置浮动或者绝对定位（如果布局允许的话） 让图片垂直居中 我们给图片加上了 vertical-align: middle 属性，可是能看到图片并没有发生变化。 原因：这里是因为属性失效了吗，其实并没有，这里属性是起作用了的，但是因为后面空白节点的高度不够，而图片是以它为参照物的 这里能清晰的看到图片相对于 x 其实是垂直居中的，但是 x 的行高并没有相对父盒子撑起来，所以会看到好像并没有什么变化。 解决办法：通过为父元素添加 line-height 属性，然后空白字符会继承这个属性形成高度，相当于把空白字符当作参照物，让它先完成垂直居中，再给 img 设置 vertical-align: middle ，然后就会相对于空白字符的中线完成近似垂直居中 这样就完成了居中，但是因为文字有下沉，相对绝对中心位置会下沉一点（不同字体下沉程度不同），因此这个垂直居中会有一些偏差，如果想实现完全垂直居中，在不影响文档结构的前提下可以给父元素设置 font-size: 0 属性，让空白字符的高度为 0，那么它的各种线就都会重合在高度为 0 的这条线上。]]></content>

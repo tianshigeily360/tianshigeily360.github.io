@@ -85,7 +85,7 @@
 
 
 
-  <meta name="keywords" content="float,clear,闭合浮动," />
+  <meta name="keywords" content="CSS,float,line-height,vertical-align,margin,padding," />
 
 
 
@@ -98,15 +98,19 @@
 
 
 
-<meta name="keywords" content="float,clear,闭合浮动">
+<meta name="keywords" content="CSS,float,line-height,vertical-align,margin,padding">
 <meta property="og:type" content="article">
-<meta property="og:title" content="闭合浮动">
-<meta property="og:url" content="https://jmaking.top/闭合浮动/index.html">
+<meta property="og:title" content="图片和文字居中对齐的三种方式">
+<meta property="og:url" content="https://jmaking.top/图片和文字居中对齐的三种方式/index.html">
 <meta property="og:site_name" content="JM&#39;s Blog">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-17T08:50:00.312Z">
+<meta property="og:image" content="https://jmaking.top/img/img5.PNG">
+<meta property="og:image" content="https://jmaking.top/img/img6.PNG">
+<meta property="og:image" content="https://jmaking.top/img/img7.PNG">
+<meta property="og:updated_time" content="2019-03-24T10:40:37.886Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="闭合浮动">
+<meta name="twitter:title" content="图片和文字居中对齐的三种方式">
+<meta name="twitter:image" content="https://jmaking.top/img/img5.PNG">
 
 
 
@@ -136,13 +140,13 @@
 
 
 
-  <link rel="canonical" href="https://jmaking.top/闭合浮动/"/>
+  <link rel="canonical" href="https://jmaking.top/图片和文字居中对齐的三种方式/"/>
 
 
 
 
 
-  <title>闭合浮动 | JM's Blog</title>
+  <title>图片和文字居中对齐的三种方式 | JM's Blog</title>
   
 
 
@@ -316,7 +320,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://jmaking.top/闭合浮动/">
+    <link itemprop="mainEntityOfPage" href="https://jmaking.top/图片和文字居中对齐的三种方式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="J、Making">
@@ -333,7 +337,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">闭合浮动</h1>
+          <h1 class="post-title" itemprop="name headline">图片和文字居中对齐的三种方式</h1>
         
 
         <div class="post-meta">
@@ -345,8 +349,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-05T18:17:46+08:00">
-                2018-05-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-24T15:06:48+08:00">
+                2019-03-24
               </time>
             
 
@@ -385,7 +389,7 @@
 
           
           
-             <span id="/闭合浮动/" class="leancloud_visitors" data-flag-title="闭合浮动">
+             <span id="/图片和文字居中对齐的三种方式/" class="leancloud_visitors" data-flag-title="图片和文字居中对齐的三种方式">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -410,7 +414,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,246 字
+                  753 字
                 </span>
               
 
@@ -426,7 +430,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  5 分钟
+                  3 分钟
                 </span>
               
             </div>
@@ -447,44 +451,28 @@
       
 
       
-        <p><div class="aplayer" data-id="445546970" data-server="netease" data-type="song" data-mode="single"></div><br><a id="more"></a></p>
+        <p><div class="aplayer" data-id="527257135" data-server="netease" data-type="song" data-mode="single"></div><br><a id="more"></a></p>
 <hr>
-<h1 id="清除浮动-VS-闭合浮动"><a href="#清除浮动-VS-闭合浮动" class="headerlink" title="清除浮动 VS 闭合浮动"></a>清除浮动 VS 闭合浮动</h1><p><strong>清除浮动</strong>只是为了让后面的元素不受前面浮动元素高度塌陷的影响，但并不能解决浮动元素的塌陷问题。</p>
-<p><strong>闭合浮动</strong>确切的含义是让浮动元素自己闭合，从而清除了高度塌陷。</p>
-<p>所以，我们为了解决高度塌陷的问题，严格意义上还是要使用闭合浮动。</p>
-<p>那么现在就把闭合浮动的所有方法总结一下，并分析一下他们的优缺点。然后找出当下最适合的闭合浮动的方法（<strong>时间紧张的同学可以直接跳到最后  Orz</strong>）。</p>
-<h1 id="1）在浮动元素末尾添加额外标签"><a href="#1）在浮动元素末尾添加额外标签" class="headerlink" title="1）在浮动元素末尾添加额外标签"></a>1）在浮动元素末尾添加额外标签</h1><h2 id="a-添加空标签-lt-div-gt"><a href="#a-添加空标签-lt-div-gt" class="headerlink" title="a.添加空标签 &lt;div&gt;"></a>a.添加空标签 <code>&lt;div&gt;</code></h2><p>示例：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"clearfix"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"clear:both;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"footer"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>这是最早也是最简单的闭合浮动的方法。但是在现在看来，这个方法会徒增许多无意义的空标签，<strong>有违结构与表现的分离</strong>，所以<strong>不推荐</strong>。</p>
-<h2 id="b-使用-lt-br-gt-标签"><a href="#b-使用-lt-br-gt-标签" class="headerlink" title="b.使用 &lt;br&gt; 标签"></a>b.使用 <code>&lt;br&gt;</code> 标签</h2><p>示例：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"clearfix"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span> <span class="attr">clear</span>=<span class="string">"all"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"footer"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>这个方法比较小众，<code>&lt;br&gt;</code> 标签自带有 html 属性 clear ，他有三个可选值：left、right 和 all。他比 <code>&lt;div&gt;</code> 空标签的语义稍强，但他同样有违结构与表现的分离，所以也<strong>不推荐</strong>。</p>
-<h1 id="2）为父元素添加属性-overflow-float-display"><a href="#2）为父元素添加属性-overflow-float-display" class="headerlink" title="2）为父元素添加属性 overflow / float / display"></a>2）为父元素添加属性 overflow / float / display</h1><blockquote>
-<p>这里涉及到一个知识点：<a href="https://www.w3.org/TR/CSS21/visuren.html#block-formatting" target="_blank" rel="noopener">BFC（ Block formatting contexts ）</a><br><strong>BFC</strong>：全称<em>块级格式化上下文</em>。用于对块级元素排版，默认情况下只有根元素（body）一个块级上下文。使元素具有包裹性，并且子元素的布局不会影响父元素布局。当触发以下条件时，会为块级元素生成一个独立的块级上下文：</p>
-<ul>
-<li>float 除了 none 以外的值 </li>
-<li>overflow 除了 visible 以外的值（hidden，auto，scroll ） </li>
-<li>display (table-cell，table-caption，inline-block) </li>
-<li>position（absolute，fixed） </li>
-<li>fieldset 元素</li>
-</ul>
-<p><strong>BFC 的特性</strong>：</p>
-<ol>
-<li>BFC 会阻止外边距叠加<br>正常情况下，同一个 BFC 下两个子块级元素的垂直方向 margin 会发生<em>叠加</em>，而两个不同的 BFC 下的子元素之间就不会发生这种情况。</li>
-<li>BFC 不会重叠浮动元素<br>浏览器会给 BFC 创建隐式的 margin 来阻止他和其子浮动元素的 margin 叠加</li>
-<li>BFC 通常可以包含浮动<br>BFC 下的子浮动元素也会参与高度计算</li>
-</ol>
-</blockquote>
-<h2 id="a-overflow-hidden"><a href="#a-overflow-hidden" class="headerlink" title="a.overflow: hidden"></a>a.overflow: hidden</h2><p>示例：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"clearfix"</span> <span class="attr">style</span>=<span class="string">"overflow:hidden; *zoom:1;"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"footer"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>通过为父元素添加 overflow 属性并设置值 hidden，在IE6中还需要触发 hasLayout ，例如 zoom：1；然后使其变为一个 BFC，只要没有为父元素设置固定高度，浮动元素就会被包含在内，从而完成浮动的闭合。<br>不过这个方法在内容增多时可能会导致内容被裁剪，因此<strong>建议少用</strong>。</p>
-<h2 id="b-overflow-auto"><a href="#b-overflow-auto" class="headerlink" title="b.overflow: auto"></a>b.overflow: auto</h2><p>示例：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"clearfix"</span> <span class="attr">style</span>=<span class="string">"overflow:auto; *zoom:1;"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"footer"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>这个方法在多个嵌套后，firefox某些情况会造成内容全选；IE中 mouseover 造成宽度改变时会出现最外层模块有滚动条等；firefox早期版本会无故产生focus等；因此也<strong>不建议使用</strong>。</p>
-<h2 id="c-float"><a href="#c-float" class="headerlink" title="c.float"></a>c.float</h2><p>在父元素上同样加上浮动属性也可以闭合浮动，但是这样会使与父元素相邻的元素布局受到影响，总不能一直浮动到 body，因此也<strong>不推荐使用</strong>。</p>
-<h2 id="d-display-table"><a href="#d-display-table" class="headerlink" title="d.display: table"></a>d.display: table</h2><p>示例：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>改变了父盒子的属性，可能因此造成一系列问题，<strong>不推荐使用</strong>。</p>
-<h1 id="3）为父元素添加伪元素"><a href="#3）为父元素添加伪元素" class="headerlink" title="3）为父元素添加伪元素"></a>3）<u>为父元素添加伪元素</u></h1><p>示例：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"clearfix"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"footer"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">::before</span>,<span class="selector-class">.clearfix</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">    content: "";  //content可以任意发挥</span><br><span class="line">    display: table; //使生成的元素以块级元素显示,占满剩余空间</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">    <span class="attribute">clear</span>: both;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.clearfix</span> &#123;</span><br><span class="line">    zoom: 1; //触发 IE hasLayout</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这个方法就是通过 ::before 和 ::after 伪元素在浮动元素直接父元素的两端添加了一个空元素，并且设置 display 为 table，生成 BFC，这样上方的 ::before 可以防止上边距折叠，再给下方 ::after 设置 clear: both 用于闭合浮动，这个方法代码量十分简洁，语义化完全正确，而且可以进行封装复用，因此<strong>十分推荐</strong>。此方法参考原文：<a href="http://nicolasgallagher.com/micro-clearfix-hack/" target="_blank" rel="noopener"><a href="http://nicolasgallagher.com/micro-clearfix-hack/" target="_blank" rel="noopener">A new micro clearfix hack</a></a></p>
-<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>总共分析了 7 种闭合浮动的方法，并找出了最符合语义化，同时被各大浏览器所接受的方法——<u><strong><em>使用伪元素</em></strong></u>。因此，为了避免不必要的 bug，以及方便后期的维护，希望大家都能用起来。</p>
+<h1 id="图片浮动，文字加边距"><a href="#图片浮动，文字加边距" class="headerlink" title="图片浮动，文字加边距"></a>图片浮动，文字加边距</h1><p>实现图：<img src="../img/img5.PNG"></p>
+<p>实现代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"imgs/img1.PNG"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#16b6b6</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">500px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span> <span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span> <span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">padding-top</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">padding-left</span>: <span class="number">50px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这个方法比较简单好理解，先浮动 img，让图片和文字同处一行，然后通过 padding 调整文字位置使其居中，不过这里因为浮动元素脱离文档流，所以文字的左边距还需要加上图片的宽度。文字也可以使用 margin，但是要为父元素设置 border，不然 margin 会和父元素合并，变成父盒子与其他盒子的外边距。</p>
+<h1 id="把图片设做-background"><a href="#把图片设做-background" class="headerlink" title="把图片设做 background"></a>把图片设做 background</h1><p>实现代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#16b6b6</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">500px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span> <span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">url</span>(one/images/header2.png) no-repeat;</span><br><span class="line">    <span class="attribute">padding-top</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">padding-left</span>: <span class="number">50px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这种方法是将图片和文字看作一个整体，把图片当作文字的背景图展示，然后给文字部分设置 padding 添加和图片之间的距离。不过这种方法如果文字部分是行内元素的话，是要设置布局为块元素，然后添加宽高属性才能设置背景图的。</p>
+<h1 id="利用-vertical-align"><a href="#利用-vertical-align" class="headerlink" title="利用 vertical-align"></a>利用 vertical-align</h1><p>这个属性还要分几种情况：</p>
+<h2 id="盒子高度由图片撑起"><a href="#盒子高度由图片撑起" class="headerlink" title="盒子高度由图片撑起"></a>盒子高度由图片撑起</h2><p>实现图：<img src="../img/img6.PNG"></p>
+<p>实现代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"imgs/img2.PNG"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#16b6b6</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span> <span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">vertical-align</span>: middle;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span> <span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>当容器盒子高度完全由图片撑起来时，文字的行高也跟随盒子高度自适应，所以只要设置图片垂直对齐方式 vertical-align 为中线 middle，图片和文字就能够居中对齐。如果这里文字部分不是 p 这种块元素，而只是一个行内元素的话，就可以省略掉 display: inline-block 属性，只需要 vertical-align: middle 一条属性就够了，十分简洁。</p>
+<h2 id="盒子高度大于图片"><a href="#盒子高度大于图片" class="headerlink" title="盒子高度大于图片"></a>盒子高度大于图片</h2><p>实现图：<img src="../img/img7.PNG"></p>
+<p>实现代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"one/images/course3.png"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#16b6b6</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">500px</span>;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">500px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span> <span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">vertical-align</span>: middle;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span> <span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这种方法主要涉及到 line-height 与 vertical-align 的关系，可以在 <a href="https://jmaking.top/line-height%20%E4%B8%8E%20vertical-align/">上篇文章</a> 理清他们的关系。</p>
 
       
     </div>
@@ -495,6 +483,36 @@
     <div>
           
             
+<div class="my_post_copyright">
+    <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+    <!-- JS库 sweetalert 可修改路径 -->
+    <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+    <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+    <p><span>本文标题:</span><a href="/图片和文字居中对齐的三种方式/">图片和文字居中对齐的三种方式</a></p>
+    <p><span>文章作者:</span><a href="/" title="访问 J、Making 的个人博客">J、Making</a></p>
+    <p><span>发布时间:</span>2019年03月24日 - 15:03</p>
+    <p><span>原始链接:</span><a href="/图片和文字居中对齐的三种方式/" title="图片和文字居中对齐的三种方式">https://jmaking.top/图片和文字居中对齐的三种方式/</a>
+        <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://jmaking.top/图片和文字居中对齐的三种方式/"  aria-label="复制成功！"></i></span>
+    </p>
+    <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
+</div>
+<script>
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+        $(".fa-clipboard").click(function(){
+            swal({
+                title: "",
+                text: '复制成功',
+                html: false,
+                timer: 500,
+                showConfirmButton: false
+            });
+        });
+    }));
+</script>
+
           
     </div>
 
@@ -552,11 +570,17 @@
       
         <div class="post-tags">
           
+            <a href="/tags/CSS/" rel="tag"><i class="fa fa-tag"></i> CSS</a>
+          
             <a href="/tags/float/" rel="tag"><i class="fa fa-tag"></i> float</a>
           
-            <a href="/tags/clear/" rel="tag"><i class="fa fa-tag"></i> clear</a>
+            <a href="/tags/line-height/" rel="tag"><i class="fa fa-tag"></i> line-height</a>
           
-            <a href="/tags/闭合浮动/" rel="tag"><i class="fa fa-tag"></i> 闭合浮动</a>
+            <a href="/tags/vertical-align/" rel="tag"><i class="fa fa-tag"></i> vertical-align</a>
+          
+            <a href="/tags/margin/" rel="tag"><i class="fa fa-tag"></i> margin</a>
+          
+            <a href="/tags/padding/" rel="tag"><i class="fa fa-tag"></i> padding</a>
           
         </div>
       
@@ -569,8 +593,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/HTML5/" rel="next" title="HTML5">
-                <i class="fa fa-chevron-left"></i> HTML5
+              <a href="/line-height 与 vertical-align/" rel="next" title="line-height 与 vertical-align">
+                <i class="fa fa-chevron-left"></i> line-height 与 vertical-align
               </a>
             
           </div>
@@ -578,10 +602,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/两栏布局/" rel="prev" title="两栏布局">
-                两栏布局 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -763,7 +783,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#清除浮动-VS-闭合浮动"><span class="nav-number">1.</span> <span class="nav-text">清除浮动 VS 闭合浮动</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1）在浮动元素末尾添加额外标签"><span class="nav-number">2.</span> <span class="nav-text">1）在浮动元素末尾添加额外标签</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#a-添加空标签-lt-div-gt"><span class="nav-number">2.1.</span> <span class="nav-text">a.添加空标签 &lt;div&gt;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#b-使用-lt-br-gt-标签"><span class="nav-number">2.2.</span> <span class="nav-text">b.使用 &lt;br&gt; 标签</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2）为父元素添加属性-overflow-float-display"><span class="nav-number">3.</span> <span class="nav-text">2）为父元素添加属性 overflow / float / display</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#a-overflow-hidden"><span class="nav-number">3.1.</span> <span class="nav-text">a.overflow: hidden</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#b-overflow-auto"><span class="nav-number">3.2.</span> <span class="nav-text">b.overflow: auto</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#c-float"><span class="nav-number">3.3.</span> <span class="nav-text">c.float</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#d-display-table"><span class="nav-number">3.4.</span> <span class="nav-text">d.display: table</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3）为父元素添加伪元素"><span class="nav-number">4.</span> <span class="nav-text">3）为父元素添加伪元素</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#小结"><span class="nav-number">5.</span> <span class="nav-text">小结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#图片浮动，文字加边距"><span class="nav-number">1.</span> <span class="nav-text">图片浮动，文字加边距</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#把图片设做-background"><span class="nav-number">2.</span> <span class="nav-text">把图片设做 background</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#利用-vertical-align"><span class="nav-number">3.</span> <span class="nav-text">利用 vertical-align</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#盒子高度由图片撑起"><span class="nav-number">3.1.</span> <span class="nav-text">盒子高度由图片撑起</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#盒子高度大于图片"><span class="nav-number">3.2.</span> <span class="nav-text">盒子高度大于图片</span></a></li></ol></li></ol></div>
             
 
           </div>
