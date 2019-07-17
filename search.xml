@@ -42,42 +42,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[CSS]]></title>
-    <url>%2Fcss%2F</url>
-    <content type="text"><![CDATA[这是对 CSS 总结的思维导图。 目录框架 选择器 Flexbox 布局 CSS：过渡 CSS：变换 CSS：动画 响应式网页设计 sass 基础 思维导图百度网盘 密码：orwr]]></content>
-      <categories>
-        <category>CSS</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-        <tag>CSS3</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[仿了个静态页面 (2)]]></title>
-    <url>%2F%E4%BB%BF%E4%BA%86%E4%B8%AA%E9%9D%99%E6%80%81%E9%A1%B5%E9%9D%A2-2%2F</url>
-    <content type="text"><![CDATA[前言这个页面除了对一些 CSS 技巧能够进一步理解，更多是对于之前布局知识的实践。 在线预览demo 总结这个页面因为主要是对布局的练习，所以没有像上个页面总结那么细碎的知识点。 主体框架的布局主要是用了之前两栏布局中的 float + margin-left 的方法（几种方法试用下来还是这个方法用起来更顺手一些）。 局部的一些小布局，像小图标与文本之类，用到了 float 和 position 的布局方式。 这个网页还用到了 分割线中间添加文字]]></content>
-      <categories>
-        <category>作品</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-        <tag>HTML</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[仿了个静态页面 (1)]]></title>
-    <url>%2F%E4%BB%BF%E4%BA%86%E4%B8%AA%E9%9D%99%E6%80%81%E9%A1%B5%E9%9D%A2-1%2F</url>
-    <content type="text"><![CDATA[前言这个页面只使用了 html + css ，这里主要为了验证一下自己对 html + css 的学习效果，同时为了更加熟悉学习到的一些技巧。 在线预览demo 知识点居中 方法 说明 margin: auto 当盒元素宽度确定时，可以使用 margin: auto 使其水平居中 text-align: center 这个方法可以对文本、图片等行内元素设置水平居中 line-height = height 把文字的行高与其本身高度设置相同，不过仅适用只有一行文字的情况 absolute + margin 为设置了 position: absolute 的元素设置其 left 或 top 属性为 50%，然后再通过 margin-left: -(元素宽度的一半)px 或 margin-top: -(元素高度的一半)px 将其拉至居中 absolute + translate 和上一个方法类似，不过使用了 CSS3 的属性，transform: translate(-50%,-50%) 可以直接使用百分比居中 背景透明 方法 说明 background: rgba(r,g,b,alpha) 这个方法可以使背景半透明化 background: red opacity: 0.5 opacity 虽然也有透明的作用，但是会使它的子元素也继承这个透明度 background: transparent transparent 是一种透明色，是完全透明的，透明度不可设置 white-space 空格处理 属性值 说明 normal 默认值；会把多个相邻空格合并成一个空格，换行则仅根据盒子大小自动换行 nowrap 表示不换行；也会合并空格，仅根据 &lt;br&gt; 标签换行，可以同 overflow text-overflow 属性一起使用 pre 保留空格不换行；不合并空格，根据源码中的换行和 &lt;br&gt; 标签换行 pre-wrap 保留空格换行；不合并空格，会根据盒子容器大小，源码中的换行和 &lt;br&gt; 标签进行换行 pre-line 合并空格且换行；会把多个相邻空格合并，换行方式与 pre-wrap 相同 hover 事件这个页面上有一处 hover 事件的动态效果，这里我是用 CSS 实现的。 代码如下（仅截取了主要代码片段）： 123.hover &#123; display: none;&#125; 这里是鼠标没有 hover 时把覆盖效果之后的 HTML 页面先隐藏。 123.main4&gt;div:hover .hover&#123; display: block;&#125; 然后在鼠标 hover 时再将 class 为 hover 的 HTML 显示。 所以处理这个 hover 事件主要用到的就是 display 布局。我们先把 hover 之后的页面写好，然后在没有 hover 效果时 display: none 将该页面隐藏，hover 之后 display: block 再显示页面。大致流程就是这样，也比较好理解。 总结页面上大部分 icon 图标的引用是通过 font-awesome ，页面的布局方式浮动、定位、flex 都有使用，不过多数使用了 flex 布局。 通过这个页面的练习，不仅让我对上面的知识点有了进一步的掌握，更让我熟悉了 CSS + DIV 布局和页面的搭建工作。]]></content>
-      <categories>
-        <category>作品</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-        <tag>HTML</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[三栏布局]]></title>
     <url>%2F%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80%2F</url>
     <content type="text"><![CDATA[这里以左右两侧固定宽度300px ，中间部分随浏览器宽度自适应变化为例，总结三栏布局的方法。 基本 HTML : 12345&lt;body&gt; &lt;div class="left"&gt;&lt;/div&gt; &lt;div class="right"&gt;&lt;/div&gt; &lt;div class="main"&gt;&lt;/div&gt;&lt;/body&gt; 自身浮动法1234567891011121314151617181920212223html,body &#123; height: 100%;&#125;.left,.right &#123; width: 300px; height: 100%; background-color: #5295ff;&#125;.left &#123; float: left;&#125;.right &#123; float: right;&#125;.main &#123; height: 100%; margin: 0 300px; background-color: #ff6700;&#125; 这个方法最简单，左侧 float:left ，右侧 float:right ，中间主体实现自适应。不过就是 HTML 布局要将主体部分放在最后，左右栏随意布置。但是中间主体存在克星，clear:both 属性，如果要使用此方法，需避免明显的clear样式。 demo 绝对定位法1234567891011121314151617181920212223242526272829html &#123; height: 100%;&#125;body &#123; height: 100%; position: relative;&#125;.left,.right &#123; position: absolute; background-color: #5295ff; width: 300px; height: 100%;&#125;.left &#123; left: 0;&#125;.right &#123; right: 0;&#125;.main &#123; height: 100%; margin: 0 300px; background-color: #ff6700;&#125; 这个方法是左右两栏通过绝对定位固定在页面两侧，然后为中间的主体栏添加左右 margin 值撑开。这里左中右三栏的 HTML 布局顺序任意。缺点是如果左右两栏盒子高度大于中间盒子，因为绝对定位的关系，会撑不起父盒子的高度，造成高度塌陷。 demo Flex 布局法123456789101112131415161718192021222324html &#123; height: 100%;&#125;body &#123; height: 100%; display: flex;&#125;.left,.right &#123; width: 300px; height: 100%; background-color: #5295ff;&#125;.right &#123; order: 1;&#125;.main &#123; flex: 1; height: 100%; background-color: #ff6700;&#125; Flex 方法也是简单好用的，不过还是因为兼容性的问题只适应现代浏览器。这里给右侧盒子添加 order:1 属性可以将它排在最后，否则根据上面 HTML 布局顺序，会出现在中间。然后给中间栏设置 flex:1 属性让他占满剩余的空间。 demo margin 负值法（双飞翼布局）这个 HTML 代码和上面的方法有些不同。 123456789&lt;body&gt; &lt;div class="main"&gt; &lt;div class="body"&gt;&lt;/div&gt; &lt;/div&gt; &lt;div class="left"&gt;&lt;/div&gt; &lt;div class="right"&gt;&lt;/div&gt;&lt;/body&gt; 123456789101112131415161718192021222324252627282930html,body &#123; height: 100%;&#125;.main &#123; width: 100%; height: 100%; float: left;&#125;.body &#123; background-color: #ff6700; height: 100%; margin: 0 300px;&#125;.left,.right &#123; float: left; background-color: #5295ff; width: 300px; height: 100%;&#125;.left &#123; margin-left: -100%;&#125;.right &#123; margin-left: -300px;&#125; 这个方法 HTML 布局顺序比较讲究，中间栏排第一，剩下左右两栏就比较随意。中间栏要用双层标签，外层宽度与浏览器相同，且浮动，内层设置 margin:0 300px 预留出左右两栏的位置。然后左右两栏设置浮动并通过 margin 负值定位，左栏 margin-left: -100% 刚好将它定位到页面最左侧，右栏 margin-left: -300px 则将它向左位移它本身的宽度定位到页面右侧。 demo]]></content>
