@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[position && z-index]]></title>
+    <url>%2Fposition%20%26%26%20z-index%2F</url>
+    <content type="text"><![CDATA[基本概念z-index定义：z-index 属性设定了一个定位元素及其后代元素或 flex 项目的 z-order。当元素之间重叠的时候，z-index 较大的元素会覆盖较小的元素在上层进行显示。 position定义：CSS position属性用于指定一个元素在文档中的定位方式。top，right，bottom 和 left 属性则决定了该元素的最终位置。 联系这两个属性都和「层级」有关系。整理罗列下 6种样式层级关系场景： 同级元素(无 position定位)，层级按元素位置先后排序。 同级元素(有 z-index属性，无 position定位)，层级按元素位置先后排序。z-index 只有在 position 为非默认值(static)时才会生效。 同级元素，有 position(非 static)定位的元素层级更高。 同级元素，如果都有 position(非 static)定位属性，则层级按元素位置先后排序。 同级元素，如果都有 position(非 static)定位属性和 z-index属性，则按 z-index 的大小值排序。 同级元素， position 及 z-index属性混排 现象错误：正确： 原因：有了上面的场景，这里出现的层级覆盖问题就很好解决了。首先定位当前问题属于场景3，那么解决方案就可以采用场景4 或场景5。 解决办法： 场景4：将伪元素 after 换为 before，然后为 .text 设置 position: relative; 场景5：为 .text 设置 position: relative; z-index: 9; 参考链接：z-index - CSS（层叠样式表） | MDNposition - CSS（层叠样式表） | MDN]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+        <tag>position</tag>
+        <tag>z-index</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[图片和文字居中对齐的三种方式]]></title>
     <url>%2F%E5%9B%BE%E7%89%87%E5%92%8C%E6%96%87%E5%AD%97%E5%B1%85%E4%B8%AD%E5%AF%B9%E9%BD%90%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F%2F</url>
     <content type="text"><![CDATA[图片浮动，文字加边距实现图： 实现代码： 1234&lt;div class="box"&gt; &lt;img src="imgs/img1.PNG" alt=""&gt; &lt;p&gt;哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇&lt;/p&gt;&lt;/div&gt; 12345678910111213.box &#123; background: #16b6b6; height: 500px;&#125;.box img &#123; float: left;&#125;.box p &#123; padding-top: 10px; padding-left: 50px;&#125; 这个方法比较简单好理解，先浮动 img，让图片和文字同处一行，然后通过 padding 调整文字位置使其居中，不过这里因为浮动元素脱离文档流，所以文字的左边距还需要加上图片的宽度。文字也可以使用 margin，但是要为父元素设置 border，不然 margin 会和父元素合并，变成父盒子与其他盒子的外边距。 把图片设做 background实现代码： 123&lt;div class="box"&gt; &lt;p&gt;哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇&lt;/p&gt;&lt;/div&gt; 1234567891011.box &#123; background: #16b6b6; height: 500px;&#125;.box p &#123; height: 40px; background: url(one/images/header2.png) no-repeat; padding-top: 10px; padding-left: 50px;&#125; 这种方法是将图片和文字看作一个整体，把图片当作文字的背景图展示，然后给文字部分设置 padding 添加和图片之间的距离。不过这种方法如果文字部分是行内元素的话，是要设置布局为块元素，然后添加宽高属性才能设置背景图的。 利用 vertical-align这个属性还要分几种情况： 盒子高度由图片撑起实现图： 实现代码： 1234&lt;div class="box"&gt; &lt;img src="imgs/img2.PNG" alt=""&gt; &lt;p&gt;哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇&lt;/p&gt;&lt;/div&gt; 1234567891011.box &#123; background: #16b6b6;&#125;.box img &#123; vertical-align: middle;&#125;.box p &#123; display: inline-block;&#125; 当容器盒子高度完全由图片撑起来时，文字的行高也跟随盒子高度自适应，所以只要设置图片垂直对齐方式 vertical-align 为中线 middle，图片和文字就能够居中对齐。如果这里文字部分不是 p 这种块元素，而只是一个行内元素的话，就可以省略掉 display: inline-block 属性，只需要 vertical-align: middle 一条属性就够了，十分简洁。 盒子高度大于图片实现图： 实现代码： 1234&lt;div class="box"&gt; &lt;img src="one/images/course3.png" alt=""&gt; &lt;p&gt;哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇&lt;/p&gt;&lt;/div&gt; 12345678910111213.box &#123; background: #16b6b6; height: 500px; line-height: 500px;&#125;.box img &#123; vertical-align: middle;&#125;.box p &#123; display: inline-block;&#125; 这种方法主要涉及到 line-height 与 vertical-align 的关系，可以在 上篇文章 理清他们的关系。]]></content>
@@ -49,8 +62,8 @@
         <category>CSS</category>
       </categories>
       <tags>
-        <tag>float</tag>
         <tag>position</tag>
+        <tag>float</tag>
         <tag>flex</tag>
         <tag>CSS 布局</tag>
       </tags>
@@ -63,8 +76,8 @@
         <category>CSS</category>
       </categories>
       <tags>
-        <tag>float</tag>
         <tag>position</tag>
+        <tag>float</tag>
         <tag>flex</tag>
         <tag>CSS 布局</tag>
       </tags>
